@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06101d">
+  <title>VC // Eymrola</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="noise"></div>
+
+  <main class="call-shell" aria-label="Voice call">
+    <header class="topbar">
+      <div class="room-mark">
+        <span class="live-dot"></span>
+        <div>
+          <b>VOICE CHANNEL</b>
+          <small id="roomName"># hidden-room</small>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="mini-btn" id="soundBtn" title="Background music">♫</button>
+        <button class="mini-btn" id="infoBtn" title="Call information">i</button>
+      </div>
+    </header>
+
+    <section class="stage">
+      <div class="stage-glow"></div>
+      <div class="participants" id="participants"></div>
+      <div class="empty-space"></div>
+    </section>
+
+    <section class="locked-banner" id="lockedBanner">
+      <div class="lock-icon">?</div>
+      <div>
+        <strong>VC LOCKED</strong>
+        <span>You can see the call, but audio is unavailable.</span>
+      </div>
+      <button class="unlock-small" id="unlockTop">UNLOCK</button>
+    </section>
+
+    <nav class="controls">
+      <button class="control" id="muteBtn" aria-pressed="false">
+        <span class="control-icon">◖</span><span>Mute</span>
+      </button>
+      <button class="control" id="mixBtn">
+        <span class="control-icon">≋</span><span>Mix</span>
+      </button>
+      <button class="control end" id="endBtn">
+        <span class="control-icon">↙</span><span>End Call</span>
+      </button>
+      <button class="control" id="moreBtn">
+        <span class="control-icon">•••</span><span>More</span>
+      </button>
+    </nav>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" id="modal" role="dialog" aria-modal="true"></section>
+  </div>
+
+  <audio id="bgMusic" src="Background msuci.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
